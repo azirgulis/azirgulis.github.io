@@ -1,0 +1,5 @@
+theme: jekyll-theme-cayman
+title: Ekonomika ir Verslumas
+description: Pagalba ir teisinė informacija – ISM programėlė VBE pasiruošimui
+exclude:
+  - README.md

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tax-Benefit Child Premium Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="./assets/cci-C2zAsAWX.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/legend-CBFwcxO8.js">
+  <link rel="modulepreload" crossorigin href="./assets/zoom-Di2v0NVo.js">
+  <link rel="stylesheet" crossorigin href="./assets/legend-CImow6MP.css">
+</head>
+<body>
+  <div id="app">
+    <header id="header">
+      <div class="header-left">
+        <h1>Tax-Benefit Child Premium Explorer</h1>
+        <a href="./index.html" class="nav-link">Lithuania</a>
+        <a href="./eu.html" class="nav-link">EU Regions</a>
+      </div>
+      <div class="header-right">
+        <div id="variable-selector"></div>
+      </div>
+    </header>
+    <main id="main">
+      <div id="map-container">
+        <div id="year-display"></div>
+        <div id="research-note" class="collapsed">
+          <button id="research-note-toggle" aria-expanded="false">
+            <span class="rn-icon" aria-hidden="true">&#9432;</span> What this shows
+          </button>
+          <div id="research-note-body">
+            <p>The map shows how much more a household&rsquo;s net income rises when it has children under each country&rsquo;s tax-and-benefit system (OECD TaxBEN). Countries differ widely.</p>
+            <p><strong>These differences do not appear to drive fertility.</strong> Across Europe the cross-country link between child premiums and the total fertility rate is weak and unstable, and reform-based evaluations (&Zcaron;irgulis, &Ccaron;ep&#279;nas &amp; Emmich, 2026) find the marginal incentive&rsquo;s causal effect on births is a precise zero. The one robust behavioural response &mdash; Poland&rsquo;s <em>Family&nbsp;500+</em> &mdash; appears in mothers&rsquo; employment, not in completed family size. Much of the apparent spread reflects the shared shape of tax schedules rather than policy choices that move births.</p>
+          </div>
+        </div>
+        <svg id="map"></svg>
+        <div id="legend"></div>
+        <div id="data-source">Source: <a href="https://taxben.oecd.org" target="_blank" rel="noopener">OECD TaxBEN</a> &middot; <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat</a></div>
+        <div id="tooltip" class="hidden"></div>
+      </div>
+      <aside id="sidebar" class="collapsed">
+        <button id="sidebar-close" aria-label="Close sidebar">&times;</button>
+        <div id="sidebar-content">
+          <h2 id="sidebar-name"></h2>
+          <div id="sidebar-value"></div>
+          <div id="sidebar-sparkline"></div>
+          <div id="sidebar-comparison"></div>
+          <div id="sidebar-breakdown"></div>
+        </div>
+      </aside>
+    </main>
+    <footer id="controls">
+      <div id="playback-controls">
+        <button id="play-btn" aria-label="Play">&#9654;</button>
+        <div id="speed-control">
+          <button class="speed-btn" data-speed="0.5">0.5&times;</button>
+          <button class="speed-btn active" data-speed="1">1&times;</button>
+          <button class="speed-btn" data-speed="2">2&times;</button>
+        </div>
+      </div>
+      <div id="slider-container">
+        <input type="range" id="year-slider" min="2006" max="2023" value="2006" step="1" />
+        <div id="slider-labels"></div>
+      </div>
+    </footer>
+    <div id="loading-overlay">
+      <div class="spinner"></div>
+      <p>Loading data&hellip;</p>
+    </div>
+  </div>
+</body>
+</html>
